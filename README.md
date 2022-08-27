@@ -1,5 +1,5 @@
 # Vehicle-Detection-in-Aerial-Images
-In this work I utilized transfer learning to train the VGG16 model for vehicle detection in multi-modal imagery. We utilize the vehicle detection in aerial imagery (VEDAI) dataset, which contains overhead imagery.
+In this work I have utilized the transfer learning to train the VGG16 model for vehicle detection in multi-modal imagery. We utilize the vehicle detection in aerial imagery (VEDAI) dataset, which contains overhead imagery.
 
 ## Dataset
 * All experiments are performed using the VEDAI dataset, which contains aerial, ortho-normalized imagery from the publicly available Utah AGRC database.
