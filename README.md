@@ -16,3 +16,13 @@ objects, we focus our attention on small vehicles, namely the car and pickupclas
 * As original VGG16 model takes input size as 224x224 thus we had to resize the 20x20 images into 224x224. Images get blurred by resizing from small pixel size
 of 20x20 to a high pixel size of 224x224. So we decided to modify the input to adapt the different size. 
 * And this technique worked.
+
+
+## Conclusions
+* In this work, we have modified the original VGG16 model to accept the input size of 128x128 and 64x4. We used the benefit of transfer learning by using the
+pre-trained weights of ImageNet and just training the last three dense layers.
+* To prevent the model to overfit we selected the dropout of 50% during training. When training, a percentage of the features are set to zero (50% in our case
+since we are using Dropout(0.5)). When testing, all features are used (and are scaled appropriately). So the model at test time is more robust - and can lead to higher testing accuracy.
+
+## Prediction
+![predicted](https://user-images.githubusercontent.com/92505473/187042667-3ca501fe-6776-4b4e-81cf-725c390ff626.png)
