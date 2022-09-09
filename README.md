@@ -20,7 +20,7 @@ of 20x20 to a high pixel size of 224x224. So we decided to modify the input to a
 
 
 ## Conclusions
-* In this work, we have modified the original VGG16 model to accept the input size of 128x128 and 64x4. We used the benefit of transfer learning by using the
+* In this work, we have modified the original VGG16 model to accept the input size of 128x128 and 64x64. We used the benefit of transfer learning by using the
 pre-trained weights of ImageNet and just training the last three dense layers.
 * To prevent the model to overfit we selected the dropout of 50% during training. When training, a percentage of the features are set to zero (50% in our case
 since we are using Dropout(0.5)). When testing, all features are used (and are scaled appropriately). So the model at test time is more robust - and can lead to higher testing accuracy.
