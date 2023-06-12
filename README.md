@@ -1,5 +1,5 @@
 # Vehicle-Detection-in-Aerial-Images
-In this work I have utilized the transfer learning to train the VGG16 model for vehicle detection in multi-modal imagery. We utilize the vehicle detection in aerial imagery (VEDAI) dataset, which contains overhead imagery.
+In this work I have utilized the transfer learning to train the VGG16 model for vehicle detection in multi-modal imagery. I utilized the vehicle detection in aerial imagery (VEDAI) dataset, which contains overhead imagery.
 
 ## Dataset
 * All experiments are performed using the VEDAI dataset, which contains aerial, ortho-normalized imagery from the publicly available Utah AGRC database.
@@ -9,7 +9,7 @@ objects, we focus our attention on small vehicles, namely the car and pickupclas
 
 ## Experiment
 * Original VEDAI dataset contains vehicles of 9 classes but here in the experiments we selected vehicles of two classes only- car and pickup. 
-* There are 2754 objects of the class 'car'and 1910 objects of the class 'pickup'. VEDAI dataset, which we used in our experiments, contains images of resolution 512x512. We bounded the Vehicle objects in the boxes of resolution of 20x20.
+* There are 2754 objects of the class 'car'and 1910 objects of the class 'pickup'. VEDAI dataset, which we used in our experiments, contains images of resolution 512x512 and bounded the Vehicle objects in the boxes of resolution of 20x20.
 * Original VGG16 model was trained on ImageNet dataset which contains objects of 1000 classes. Model takes images of size 224x224 as input. So we had to resize the images of size 20x20 into size of 224x224.
 
 
@@ -20,7 +20,7 @@ of 20x20 to a high pixel size of 224x224. So we decided to modify the input to a
 
 
 ## Conclusions
-* In this work, we have modified the original VGG16 model to accept the input size of 128x128 and 64x64. We used the benefit of transfer learning by using the
+* In this work, we have modified the original VGG16 model to accept the input size of 128x128 and 64x64. And used the benefit of transfer learning by using the
 pre-trained weights of ImageNet and just training the last three dense layers.
 * To prevent the model to overfit we selected the dropout of 50% during training. When training, a percentage of the features are set to zero (50% in our case
 since we are using Dropout(0.5)). When testing, all features are used (and are scaled appropriately). So the model at test time is more robust - and can lead to higher testing accuracy.
